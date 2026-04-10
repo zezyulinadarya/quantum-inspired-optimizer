@@ -1,5 +1,12 @@
 # quantum-inspired-optimizer
 Quantum-inspired optimizer for QUBO/MaxCut | Hackathon project
+## Метрика качества
+
+В качестве метрики качества рассматривается среднее отклонение от минимальной (эталонной) энергии:
+
+$$
+\text{Score} = \frac{1}{K} \sum_{k=1}^{K} \left( E_{\text{solution}}^{(k)} - E_{\text{min}}^{(k)} \right)
+$$
 
 ## Технические ограничения
 
@@ -9,5 +16,5 @@ Quantum-inspired optimizer for QUBO/MaxCut | Hackathon project
 | Размер N (открытый тест) | до 180 узлов |
 | Размер N (закрытый тест) | от 800 до 10 000 узлов |
 | Формат входных данных | Симметричная матрица размера **N × N** в формате `numpy.ndarray` |
-| Формат выходных данных | Бинарный вектор длины **N** в формате `numpy.ndarray` (значения 0 или 1) |
+| Формат выходных данных | Бинарный вектор длины **N** в формате `numpy.ndarray` |
 | Платформа проверки | QBoard CloudOS |
